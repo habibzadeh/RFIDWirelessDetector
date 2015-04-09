@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/detector.cpp : src/detector.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/detector.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/detector.cpp
+	@true
+
